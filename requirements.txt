@@ -1,0 +1,15 @@
+# requirements.txt
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+redis
+celery
+prometheus-fastapi-instrumentator
+sentence-transformers
+transformers
+py2neo  # For Neo4j graph database interactions
+jose  # Optionally for JWT tokens if using for auth
+kafka-python  # For Apache Kafka integration
+pytest  # For testing
+requests  # For making HTTP requests, useful in some service interactions
