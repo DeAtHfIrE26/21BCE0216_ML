@@ -110,6 +110,11 @@ Uvicorn - ASGI server for Python web apps
 📬 Contact
 If you have any questions or feedback, feel free to open an issue or contact the repository maintainer at DeAtHfIrE26.
 
+## UI Components
+
+This section contains various UI components designed to demonstrate modern web design practices. Check out the sample UI card component:
+
+- [Sample UI Card](ui-components/sample-ui-card.html)
 
 
 
