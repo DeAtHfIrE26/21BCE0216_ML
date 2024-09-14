@@ -109,37 +109,7 @@ Uvicorn - ASGI server for Python web apps
 
 📬 Contact
 If you have any questions or feedback, feel free to open an issue or contact the repository maintainer at DeAtHfIrE26.
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sample UI Component</title>
-    <style>
-        .card {
-            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-            transition: 0.3s;
-            width: 40%;
-            border-radius: 5px;
-            padding: 15px;
-            text-align: center;
-            background-color: #f1f1f1;
-        }
 
-        .card:hover {
-            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
-        }
-    </style>
-</head>
-<body>
-
-<div class="card">
-    <h1>Sample UI Card</h1>
-    <p>Some example text. Some example text.</p>
-</div>
-
-</body>
-</html>
 
 
 
