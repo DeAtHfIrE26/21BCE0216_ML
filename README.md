@@ -6,6 +6,7 @@
 
 Welcome to the **Intelligent Retrieval System**! This project is a sophisticated backend solution for document retrieval, leveraging the power of Neo4j for data storage and providing a robust API interface for real-time document search and management.
 
+https://imgur.com/a/9od7CuX
 
 
 ## ✨ Features
