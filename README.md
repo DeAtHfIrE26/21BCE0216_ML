@@ -5,9 +5,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/DeAtHfIrE26/21BCE0216_ML)](https://github.com/DeAtHfIrE26/21BCE0216_ML/issues)
 
 Welcome to the **Intelligent Retrieval System**! This project is a sophisticated backend solution for document retrieval, leveraging the power of Neo4j for data storage and providing a robust API interface for real-time document search and management.
-## Project Demo
 
-![Document Retrieval System Demo](https://your-hosted-link-to-gif.gif)
 
 
 ## ✨ Features
@@ -72,6 +70,7 @@ Run the Docker Container:
 bash
 Copy code
 docker run -p 8000:8000 intelligent-retrieval-system
+
 📖 Usage
 Available API Endpoints
 GET /health - Check if the API is active.
@@ -86,6 +85,7 @@ curl -X POST "http://localhost:8000/search" -H "Content-Type: application/json" 
   "top_k": 5,
   "threshold": 0.7
 }'
+
 🔄 Background Scraping Service
 The application automatically starts a background thread to scrape news articles as soon as the server starts. This feature ensures that the database is continuously updated with the latest information.
 
