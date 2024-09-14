@@ -5,8 +5,16 @@
 [![GitHub issues](https://img.shields.io/github/issues/DeAtHfIrE26/21BCE0216_ML)](https://github.com/DeAtHfIrE26/21BCE0216_ML/issues)
 
 Welcome to the **Intelligent Retrieval System**! This project is a sophisticated backend solution for document retrieval, leveraging the power of Neo4j for data storage and providing a robust API interface for real-time document search and management.
+## Project Demo
 
-![Intelligent Retrieval System](https://media.giphy.com/media/3ohzdYJK1wAdPWVk88/giphy.gif)
+Check out this demo to see our intelligent document retrieval system in action!
+
+[![Watch the video](https://user-images.githubusercontent.com/demo-thumbnail.png)](https://user-images.githubusercontent.com/demo-video.mp4)
+
+Or see this live GIF in action:
+
+![Document Retrieval System Demo](https://user-images.githubusercontent.com/demo-gif.gif)
+
 
 ## ✨ Features
 
