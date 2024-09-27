@@ -1,0 +1,54 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: document-retrieval-app-service
+spec:
+  selector:
+    app: document-retrieval-app
+  ports:
+    - protocol: TCP
+      port: 8000  # Kubernetes service port
+      targetPort: 8000  # Application container port
+  type: ClusterIP  # Internal access only
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: document-retrieval-db-service
+spec:
+  selector:
+    app: document-retrieval-db
+  ports:
+    - protocol: TCP
+      port: 5432
+      targetPort: 5432
+  type: ClusterIP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: document-retrieval-elasticsearch-service
+spec:
+  selector:
+    app: document-retrieval-elasticsearch
+  ports:
+    - protocol: TCP
+      port: 9200
+      targetPort: 9200
+  type: ClusterIP
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: document-retrieval-kibana-service
+spec:
+  selector:
+    app: document-retrieval-kibana
+  ports:
+    - protocol: TCP
+      port: 5601
+      targetPort: 5601
+  type: ClusterIP
