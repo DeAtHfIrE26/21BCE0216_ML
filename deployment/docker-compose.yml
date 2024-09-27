@@ -1,0 +1,65 @@
+version: '3.8'
+
+services:
+  app:
+    image: your-app-image  # Replace with your app's Docker image
+    container_name: document-retrieval-app
+    depends_on:
+      - db
+      - elasticsearch
+    ports:
+      - "8000:8000"  # App port
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_USER: postgres
+      DB_PASSWORD: example
+      DB_NAME: documents
+      ELASTICSEARCH_HOST: elasticsearch
+      ELASTICSEARCH_PORT: 9200
+    volumes:
+      - ./app:/usr/src/app  # If using local code, mount it here
+    networks:
+      - doc_retrieval_net
+
+  db:
+    image: postgres:13
+    container_name: document-retrieval-db
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: documents
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    networks:
+      - doc_retrieval_net
+
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.10.0
+    container_name: document-retrieval-elasticsearch
+    environment:
+      - discovery.type=single-node
+      - "ES_JAVA_OPTS=-Xms512m -Xmx512m"
+    ports:
+      - "9200:9200"  # Elasticsearch port
+    volumes:
+      - es_data:/usr/share/elasticsearch/data
+    networks:
+      - doc_retrieval_net
+
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.10.0
+    container_name: document-retrieval-kibana
+    depends_on:
+      - elasticsearch
+    ports:
+      - "5601:5601"  # Kibana port for Elasticsearch visualization
+    networks:
+      - doc_retrieval_net
+
+volumes:
+  db_data:
+  es_data:
+
+networks:
+  doc_retrieval_net:
